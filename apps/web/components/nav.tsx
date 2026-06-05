@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { cn } from "@/lib/utils"
-import { Button } from "@agent-learning/ui"
+import { Button, Logo } from "@agent-learning/ui"
 import { ThemeToggle } from "@/components/theme-toggle"
 import Link from "next/link"
 
@@ -107,11 +107,14 @@ export function Nav() {
         {/* Logo */}
         <a
           href="/"
-          className="font-mono text-sm font-medium tracking-tight"
-          style={{ color: "var(--text-primary)", textDecoration: "none" }}
+          className="flex items-center gap-2.5 no-underline"
           aria-current={pathname === "/" ? "page" : undefined}
+          aria-label="AgentLab 首页"
         >
-          AgentLab<span style={{ color: "var(--accent)" }}>.</span>
+          <Logo className="w-7 h-7 shrink-0" />
+          <span className="font-mono text-sm font-medium tracking-tight" style={{ color: "var(--text-primary)" }}>
+            AgentLab<span style={{ color: "var(--accent)" }}>.</span>
+          </span>
         </a>
 
         {/* Desktop links */}

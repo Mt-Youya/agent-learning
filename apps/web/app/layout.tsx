@@ -8,6 +8,7 @@ import "./globals.css"
 export const metadata: Metadata = {
   title: "AgentLab — AI Agent 工程化学习平台",
   description: "面向前端工程师的 AI Agent 系统学习平台。五个模块，真实代码，JS/TS 全程，无 Python 依赖。",
+  icons: { icon: "/logo.svg" },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

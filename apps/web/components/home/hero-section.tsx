@@ -16,7 +16,7 @@ import { IconArrowRight } from "@tabler/icons-react"
 import { gsap } from "gsap"
 import { useGSAP } from "@gsap/react"
 import { cn } from "@/lib/utils"
-import { buttonVariants } from "@agent-learning/ui"
+import { buttonVariants, Logo } from "@agent-learning/ui"
 
 /* ─── Register GSAP plugins ─────────────────────────── */
 gsap.registerPlugin(useGSAP)
@@ -234,6 +234,12 @@ export function HeroSection() {
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_45%] gap-10 lg:gap-16 items-start">
           {/* ── Left: text ───────────────────────────── */}
           <div className="flex flex-col gap-6">
+            {/* Logo mark */}
+            <Logo
+              className="hero-item w-16 h-16 md:w-20 md:h-20"
+              aria-hidden="true"
+            />
+
             <p
               className="hero-item font-mono text-xs tracking-[0.18em] uppercase"
               style={{ color: "var(--text-muted)" }}

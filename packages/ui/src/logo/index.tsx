@@ -1,0 +1,30 @@
+import type { SVGProps } from "react"
+
+interface LogoProps extends SVGProps<SVGSVGElement> {
+  /** Override the accent color. Defaults to var(--accent). */
+  color?: string
+}
+
+export function Logo({ color = "var(--accent)", ...props }: LogoProps) {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none" aria-label="AgentLab" {...props}>
+      {/* Outer hexagon: the "lab" container */}
+      <path
+        d="M60 8L106.5 35V89L60 116L13.5 89V35L60 8Z"
+        stroke={color}
+        strokeWidth={5}
+        strokeLinejoin="round"
+        fill={color}
+        fillOpacity={0.06}
+      />
+      {/* Inner spark: the "agent" — 4-point star (neural node) */}
+      <path
+        d="M60 38L66 54L82 60L66 66L60 82L54 66L38 60L54 54L60 38Z"
+        fill={color}
+        opacity={0.9}
+      />
+      {/* Center node: intelligence focal point */}
+      <circle cx={60} cy={60} r={5} fill={color} />
+    </svg>
+  )
+}
