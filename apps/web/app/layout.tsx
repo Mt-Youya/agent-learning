@@ -3,6 +3,7 @@ import { GeistSans } from "geist/font/sans"
 import { GeistMono } from "geist/font/mono"
 import { cn } from "@/lib/utils"
 import { FloatingChat } from "@/components/chat/floating-chat"
+import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 
 export const metadata: Metadata = {
@@ -42,6 +43,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="font-sans">
         {children}
         <FloatingChat />
+        <Analytics />
         {/* impeccable-live-start */}
         <script src="http://localhost:8400/live.js"></script>
         {/* impeccable-live-end */}
