@@ -10,10 +10,15 @@
  */
 
 import { streamText, type ModelMessage } from "ai"
-import { openai } from "@ai-sdk/openai"
+import { openai, createOpenAI } from "@ai-sdk/openai"
 import { anthropic } from "@ai-sdk/anthropic"
 import { AppError } from "@agent-learning/server-shared"
 import { config } from "../config.js"
+
+const deepseek = createOpenAI({
+  baseURL: "https://api.deepseek.com/v1",
+  apiKey: config.deepseek.apiKey,
+})
 
 /* ── Model registry ────────────────────────────────────
    Add new providers here without touching controllers.  */
@@ -23,6 +28,12 @@ function resolveModel(modelId: string) {
       throw new AppError("ANTHROPIC_API_KEY not configured", 503, "PROVIDER_UNAVAILABLE")
     }
     return anthropic(modelId)
+  }
+  if (modelId.startsWith("deepseek-")) {
+    if (!config.deepseek.apiKey) {
+      throw new AppError("DEEPSEEK_API_KEY not configured", 503, "PROVIDER_UNAVAILABLE")
+    }
+    return deepseek(modelId)
   }
   if (modelId.startsWith("gpt-") || modelId.startsWith("o1-") || modelId.startsWith("o3-")) {
     if (!config.openai.apiKey) {

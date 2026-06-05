@@ -22,6 +22,9 @@ export const config = {
   anthropic: {
     apiKey: optional("ANTHROPIC_API_KEY", ""),
   },
+  deepseek: {
+    apiKey: optional("DEEPSEEK_API_KEY", ""),
+  },
 
   /** Default model used when client doesn't specify one */
   defaultModel: optional("DEFAULT_MODEL", "gpt-4o-mini"),

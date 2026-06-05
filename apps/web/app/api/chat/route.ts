@@ -14,12 +14,18 @@
  */
 
 import { streamText, convertToModelMessages } from "ai"
-import { openai } from "@ai-sdk/openai"
+import { openai, createOpenAI } from "@ai-sdk/openai"
 import { anthropic } from "@ai-sdk/anthropic"
 import { type NextRequest } from "next/server"
 
+const deepseek = createOpenAI({
+  baseURL: "https://api.deepseek.com/v1",
+  apiKey: process.env["DEEPSEEK_API_KEY"] ?? "",
+})
+
 function selectModel(modelId: string) {
   if (modelId.startsWith("claude-")) return anthropic(modelId)
+  if (modelId.startsWith("deepseek-")) return deepseek(modelId)
   return openai(modelId)
 }
 

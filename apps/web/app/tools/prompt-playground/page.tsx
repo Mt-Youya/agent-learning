@@ -8,7 +8,7 @@ import { Button } from "@agent-learning/ui"
 /* ─── Types ─────────────────────────────────────────── */
 interface ModelConfig {
   label: string
-  provider: "openai" | "anthropic"
+  provider: "openai" | "anthropic" | "deepseek"
   maxTokens: number
 }
 
@@ -17,6 +17,8 @@ const MODELS: Record<string, ModelConfig> = {
   "gpt-4o-mini": { label: "GPT-4o Mini", provider: "openai", maxTokens: 128000 },
   "claude-3-5-sonnet": { label: "Claude 3.5 Sonnet", provider: "anthropic", maxTokens: 200000 },
   "claude-3-haiku": { label: "Claude 3 Haiku", provider: "anthropic", maxTokens: 200000 },
+  "deepseek-v3": { label: "DeepSeek V3", provider: "deepseek", maxTokens: 128000 },
+  "deepseek-r1": { label: "DeepSeek R1", provider: "deepseek", maxTokens: 128000 },
 }
 
 /* ─── Mock streaming responses ──────────────────────── */

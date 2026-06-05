@@ -108,6 +108,7 @@ const SCENARIOS: Scenario[] = [
 ]
 
 const DEFAULT_SCENARIO: Scenario = {
+  keywords: [],
   steps: [
     {
       kind: "thought",
