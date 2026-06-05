@@ -1,0 +1,9 @@
+packages:
+  - "packages/*"
+  - "apps/*"
+  - "libs/*"
+  - "server/*"
+allowBuilds:
+  esbuild: true
+  msw: true
+  sharp: true

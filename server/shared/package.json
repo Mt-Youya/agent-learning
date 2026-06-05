@@ -1,0 +1,22 @@
+{
+  "name": "@agent-learning/server-shared",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./middleware": "./src/middleware/index.ts",
+    "./types": "./src/types.ts"
+  },
+  "dependencies": {
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@types/koa": "^3.0.3",
+    "koa": "^3.2.1",
+    "typescript": "^6.0.3"
+  },
+  "peerDependencies": {
+    "koa": "^3.0.0"
+  }
+}

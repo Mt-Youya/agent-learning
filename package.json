@@ -1,0 +1,41 @@
+{
+  "name": "agent-learning",
+  "version": "0.0.1",
+  "description": "",
+  "keywords": [],
+  "license": "ISC",
+  "author": "Cyrus Doyle",
+  "type": "module",
+  "scripts": {
+    "clean": "sh scripts/clean.sh",
+    "dev": "pnpm --filter @agent-learning/web dev",
+    "serve:chat": "pnpm --filter @agent-learning/chat dev",
+    "serve:api": "pnpm --filter @agent-learning/api dev",
+    "serve:gw": "pnpm --filter @agent-learning/gateway dev",
+    "build": "pnpm --filter @agent-learning/web build",
+    "start": "pnpm --filter @agent-learning/web start",
+    "typecheck": "pnpm -r --parallel run typecheck",
+    "lint": "oxlint",
+    "lint:fix": "oxlint --fix",
+    "fmt": "oxfmt",
+    "fmt:check": "oxfmt --check"
+  },
+  "dependencies": {
+    "@hugeicons/core-free-icons": "^4.2.0",
+    "@hugeicons/react": "^1.1.6"
+  },
+  "devDependencies": {
+    "@types/node": "^25.9.1",
+    "oxfmt": "^0.53.0",
+    "oxlint": "^1.68.0"
+  },
+  "lint-staged": {
+    "*": "oxfmt --no-error-on-unmatched-pattern",
+    "*.{js,jsx,ts,tsx,mjs,cjs}": "pnpm lint"
+  },
+  "engines": {
+    "node": ">=24",
+    "pnpm": ">=11.5"
+  },
+  "packageManager": "pnpm@11.5.1+sha512.93f7b57422ea7068257235b4c16eb60762eb68e1dc23723199cc739043ea9be2c4143274a399d8c6defa2b1176226d9ca1c4b63482d6200c1a8fbaa78c1d1485"
+}

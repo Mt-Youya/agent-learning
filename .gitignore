@@ -1,0 +1,48 @@
+# OS
+.DS_Store
+desktop.ini
+Thumbs.db
+
+# Node
+node_modules/
+.pnpm-store/
+
+# Next.js
+apps/web/.next/
+.next
+
+# TypeScript incremental build cache
+tsconfig.tsbuildinfo
+**/tsconfig.tsbuildinfo
+next-env.d.ts
+**/next-env.d.ts
+
+# Build output
+dist/
+build/
+
+# Env
+.env
+.env.local
+.env*.local
+
+# Editor
+.vscode/
+.idea/
+.catpaw/
+
+# Python
+*.pyc
+*.pyo
+.venv/
+venv/
+dist/
+ 
+ 
+settings.local.json
+
+# Claude Code 本地配置（含本机绝对路径）
+# .claude/launch.json
+
+# Codex
+.codex-run/

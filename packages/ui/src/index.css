@@ -1,0 +1,10 @@
+/* Tailwind v4: instruct the consuming app's Tailwind engine to scan
+   all source files in this package. Paths resolve relative to this
+   file, so any app that @imports this CSS gets the source hint for free. */
+@source "./**/*.{ts,tsx}";
+
+@property --button-angle {
+  syntax: '<angle>';
+  inherits: false;
+  initial-value: -75deg;
+}
