@@ -51,6 +51,15 @@ const TOOLS: Tool[] = [
     badge: "可用",
     available: true,
   },
+  {
+    id: "05",
+    name: "TubePilot Video Agent",
+    description:
+      "真实 Agent Loop 演示——Claude 自主调用 5 个工具（脚本→语音→场景→视频→发布）完成视频生成 Pipeline。对应《Agent 开发实战》第十四章。",
+    href: "/tools/video-agent",
+    badge: "真实 API",
+    available: true,
+  },
 ]
 
 export default function ToolsPage() {

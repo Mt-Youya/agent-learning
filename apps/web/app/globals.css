@@ -1,13 +1,13 @@
 /* Tailwind v4: @import replaces @tailwind base/components/utilities  */
 @import "tailwindcss";
-/* Reference the JS config for theme extensions (colors, z-index, etc.) */
-@config "../tailwind.config.ts";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
 /* Import the UI package's own Tailwind source hint — the @source directive
    inside resolves relative to packages/ui/src, so this app never needs to
    know about the package's internal directory layout.                    */
 @import "@agent-learning/ui/styles.css";
-@import "tw-animate-css";
-@import "shadcn/tailwind.css";
+/* Reference the JS config for theme extensions (colors, z-index, etc.) */
+@config "../tailwind.config.ts";
 
 /* ─── Tailwind v4 border-radius theme ───────────────────
    @theme overrides are the authoritative way to set rounded-*

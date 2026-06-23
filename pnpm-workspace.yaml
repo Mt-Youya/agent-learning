@@ -3,7 +3,12 @@ packages:
   - "apps/*"
   - "libs/*"
   - "server/*"
+  - "examples"
 allowBuilds:
   esbuild: true
   msw: true
   sharp: true
+minimumReleaseAgeExclude:
+  - '@langchain/langgraph-checkpoint@1.1.0'
+  - '@langchain/langgraph-sdk@1.9.21'
+  - '@langchain/langgraph@1.4.1'

@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "",
   "keywords": [],
-  "license": "ISC",
+  "license": "MIT",
   "author": "Cyrus Doyle",
   "type": "module",
   "scripts": {
@@ -21,13 +21,13 @@
     "fmt:check": "oxfmt --check"
   },
   "dependencies": {
-    "@hugeicons/core-free-icons": "^4.2.0",
-    "@hugeicons/react": "^1.1.6"
+    "@hugeicons/core-free-icons": "^4.2.1",
+    "@hugeicons/react": "^1.1.7"
   },
   "devDependencies": {
-    "@types/node": "^25.9.1",
-    "oxfmt": "^0.53.0",
-    "oxlint": "^1.68.0"
+    "@types/node": "^26.0.0",
+    "oxfmt": "^0.55.0",
+    "oxlint": "^1.70.0"
   },
   "lint-staged": {
     "*": "oxfmt --no-error-on-unmatched-pattern",

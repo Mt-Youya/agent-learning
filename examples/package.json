@@ -1,0 +1,27 @@
+{
+  "name": "@agent-learning/examples",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "description": "《Agent 开发实战指南》各章节代码演示",
+  "scripts": {
+    "01": "tsx scripts/01-model-cascade.ts",
+    "02": "tsx scripts/02-tool-design.ts",
+    "03": "tsx scripts/03-agent-loop-sdk.ts",
+    "04": "tsx scripts/04-agent-loop-raw.ts",
+    "05": "tsx scripts/05-context-compress.ts",
+    "06": "tsx scripts/06-error-retry.ts",
+    "07": "tsx scripts/07-eval.ts",
+    "08": "tsx scripts/08-minimal-agent.ts",
+    "09": "tsx scripts/09-langgraph.ts"
+  },
+  "dependencies": {
+    "@ai-sdk/anthropic": "^3.0.85",
+    "@langchain/langgraph": "^1.4.4",
+    "ai": "^6.0.208"
+  },
+  "devDependencies": {
+    "tsx": "^4.22.4",
+    "typescript": "^6.0.3"
+  }
+}
